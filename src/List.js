@@ -14,8 +14,8 @@ function List(){
             axios.get(`https://randomuser.me/api/0.8/?results=20`)
             .then(res => {
                 setData(res);
-                localStorage.setItem('USER-LIST', JSON.stringify(res.results));
-                console.log(data);        
+                localStorage.setItem('USER-LIST', JSON.stringify(res));
+                console.log(res);        
             })
         }, 4000);
     },[])
