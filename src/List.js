@@ -13,10 +13,11 @@ function List(){
         setTimeout(() => {
             axios.get(`https://randomuser.me/api/0.8/?results=20`)
             .then(res => {
-                setData(res.data);
+                setData(res);
+                localStorage.setItem('USER-LIST', JSON.stringify(res.results));
                 console.log(data);        
             })
-        }, 2000);
+        }, 4000);
     },[])
 
     function addUser(){
